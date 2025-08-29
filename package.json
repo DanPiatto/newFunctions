@@ -1,0 +1,53 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.ts .",
+    "build": "tsc --skipLibCheck",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0",
+    "@google-cloud/storage": "^7.11.3",
+    "@sendgrid/mail": "7.6.2",
+    "axios": "^1.7.2",
+    "busboy": "^1.6.0",
+    "cors": "^2.8.5",
+    "expo-server-sdk": "3.6.0",
+    "express": "^4.17.2",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.4.1",
+    "fs-extra": "^11.2.0",
+    "googleapis": "^140.0.1",
+    "moment": "2.29.3",
+    "openai": "^4.52.5",
+    "qs": "^6.12.2",
+    "sharp": "^0.33.4",
+    "stripe": "8.202.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/busboy": "^1.5.4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^9.0.0",
+    "@types/image-to-base64": "^2.1.2",
+    "@types/multer": "^1.4.11",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.0",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^5.0.4"
+  },
+  "private": true
+}
+
